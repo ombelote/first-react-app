@@ -1,5 +1,6 @@
 import React from 'react';
 import "./ExpenseDate.css";
+import Card from './Card';
 
 function ExpenseDate(props){
     const month = props.date.toLocaleString('en-us',{month:'long'});
@@ -7,11 +8,11 @@ function ExpenseDate(props){
     const year = props.date.getFullYear();
 
     return (
-        <div className = "expense-date">
+        <Card className = "expense-date">
         <div className = "expense-date__day">{day}</div>
         <div className = "expense-date__month">{month}</div>
         <div className = "expense-date__year">{year}</div>
-      </div>
+      </Card>
     );
 }
 
